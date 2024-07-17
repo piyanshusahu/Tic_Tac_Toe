@@ -2,15 +2,15 @@ body{
     display: flex;
     justify-content: center;
     text-align: center;
+    background-color: #F7E7DC;
 }
 .box-container{
-    background-color: white;
     height: 700px;
     width: 80%;
     color: black;
 }
 .boxes{
-    background-color: black;
+    background-color: #758694;
     height: 437.64px;
     width: 390px;
     display: flex;
@@ -19,7 +19,7 @@ body{
 .box{
     width: 121px;
     height: 31.2%;
-    background-color: white;
+    background-color: #F7E7DC;
     margin: 7px;
     line-height: 140px;
     border: none;
