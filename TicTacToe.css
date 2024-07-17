@@ -1,0 +1,58 @@
+body{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.box-container{
+    background-color: white;
+    height: 700px;
+    width: 80%;
+    color: black;
+}
+.boxes{
+    background-color: black;
+    height: 437.64px;
+    width: 390px;
+    display: flex;
+    justify-content: center;
+}
+.box{
+    width: 121px;
+    height: 31.2%;
+    background-color: white;
+    margin: 7px;
+    line-height: 140px;
+    border: none;
+    font-size: xxx-large;
+}
+.line-one{
+    text-align: center;
+    justify-content: center;
+}
+.subheader-box{
+    display: flex;
+    justify-content: center;
+    height: 70%;
+    width: 100%;
+}
+.up{
+    margin-top: 0px;;
+}
+.down{
+    margin-bottom: 0px;
+}
+.left{
+    margin-left: 0px;
+}
+.right{
+    margin-right: 0px;
+}
+.hidden{
+    display: none;
+}
+.win-message1{
+    height: 800px;
+    justify-content: center;
+    line-height: 370px;
+    font-size: 50px;
+}

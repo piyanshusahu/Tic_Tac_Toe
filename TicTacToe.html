@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tic tac toe</title>
+    <link rel="stylesheet" href="tic.css">
+</head>
+<body>
+    <div class="box-container">
+        <div class="header-text">
+            <h1><u>TIC TAC TOE</u></h1>
+            <button class="start">start new game</button>
+            <h2 class="hidden">X's turn</h2>
+            <p class="win-message1 hidden"></p>
+        </div>
+        <br>
+        <br>
+        <div class="subheader-box">
+            <div class="boxes">
+                <div class="line-one">
+                    <button class="box up left" type="button"></button>
+                    <button class="box left" type="button"></button>
+                    <button class="box down left" type="button"></button>
+                </div>
+                <div class="line-two">
+                    <button class="box up" type="button"></button>
+                    <button class="box" type="button"></button>
+                    <button class="box down" type="button"></button>
+                </div>
+                <div class="line-three">
+                    <button class="box up right" type="button"></button>
+                    <button class="box right" type="button"></button>
+                    <button class="box down right" type="button"></button>
+                </div>
+            </div>
+        </div>
+        <button class="reset">reset game</button>
+    </div>
+    <script src="tic.js"></script>
+</body>
+</html>
