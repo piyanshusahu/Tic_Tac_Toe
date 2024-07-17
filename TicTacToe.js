@@ -1,23 +1,23 @@
-let btn=document.querySelector(".start");
+let btn=document.querySelector(".start");   
 let boxes=document.querySelectorAll(".box");
 let head=document.querySelector("h2");
-let wintext1=document.querySelector(".win-message1");
+let wintext1=document.querySelector(".win-message1");  // this is a win message block which remains hidden untill a winner is declared.
 let start=false;
-let turnx=true;
+let turnx=true;  // by default we consider that first turn is for X.
 let draw=true;
 let count=0;
 btn.addEventListener("click", () =>{
-    wintext1.classList.add("hidden");
+    wintext1.classList.add("hidden"); //hidden is a class applied to certain divs/paras whose code can be seen in TicTacToe.css
     if(start==false){
         turnx=true;
-        btn.classList.add("hidden");
+        btn.classList.add("hidden");  // start button will get hidden.
         start=true;
         head.innerText="X's turn";
-        head.classList.remove("hidden");
-        enable();
+        head.classList.remove("hidden");  // head paragraph unhides and tells us whose turn it is.
+        enable();  // it enables the button.
     }
 });
-let winarr=[
+let winarr=[   // winner array in which all the winning sequence is present.
     [0,1,2],
     [3,4,5],
     [6,7,8],
@@ -28,7 +28,7 @@ let winarr=[
     [2,4,6],
 ]
 
-let reset=document.querySelector(".reset");
+let reset=document.querySelector(".reset"); // if we press the reset button, the game resets.
 reset.addEventListener("click",startgame);
 
 function startgame(){
@@ -38,12 +38,12 @@ function startgame(){
     enable();
     head.classList.add("hidden");
     btn.classList.remove("hidden");
-    wintext1.classList.add("hidden");
+    wintext1.classList.add("hidden"); // applying all the initial conditions.
 };
 
 function enable(){
     for(box of boxes){
-        box.disabled=false;
+        box.disabled=false;  // after every move button must be disabled so that it cannot be accessed again. after each winner declaration button must be enabled again.
         box.innerText="";
     }
 };
@@ -61,15 +61,15 @@ function checkwinnner(){
             }
         }
     }
-    if(count==9){
+    if(count==9){ // check for 9 entries
         count=0;
-        if(draw==true){
+        if(draw==true){  // if draw variable is true then the match is draw.
             head.innerText="match draw";
         }
     }
 };
 
-const disable = ()=>{
+const disable = ()=>{  // disable function disables the button after every move.
     for(box of boxes){
         box.disabled=true;
     }
@@ -84,14 +84,14 @@ const showwinner =((winner) => {
 });
 
 boxes.forEach(box => {
-    box.addEventListener("click", () =>{
+    box.addEventListener("click", () =>{  // by clicking each box, it will check for winner.
         if(start===true){
             count++;
-            if(turnx){
+            if(turnx){  // X's turn just over
                 box.innerText='X';
                 head.innerText=`O's turn`;
             }
-            else{
+            else{  // O's turn just over.
                 box.innerText='O';
                 head.innerText=`X's turn`;
             }
